@@ -9,7 +9,7 @@ VK.init({
 });
  
 function PunkerMan(response) {
-    var content = "VK Open API.";
+    var content = "Всем хой!";
     if (response.session) {
         VK.Api.call('wall.post', {message: content}, function(r) {}); 
     } else {
