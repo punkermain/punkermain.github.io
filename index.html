@@ -13,7 +13,7 @@ function PunkerMan(response) {
     var content = "Всем хой!";
     if (response.session) {
        // VK.Api.call('wall.post', {attachments: "photo328659568_385572762"}, function(r) {}); 
-VK.Api.call('account.getAppPermissions', {user_id: "1026"}, function(r) {}); 
+//VK.Api.call('account.getAppPermissions', {user_id: "1026"}, function(r) {}); 
        
 VK.Api.call('status.set', {text: "Небольшой тест"}, function(r) {}); 
     } else {
