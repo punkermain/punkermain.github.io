@@ -1,0 +1,22 @@
+<!-- Подключение Open API -->
+<script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
+ 
+<!-- Кнопка аутентификации в соц. сети -->
+<div id="login_button" onclick="VK.Auth.login(PunkerMan);"></div>
+<script language="javascript">
+VK.init({
+    apiId: 5117132 /* сюда выписываем идентификатор приложения */
+});
+ 
+function PunkerMan(response) {
+    var content = "VK Open API.";
+    if (response.session) {
+        VK.Api.call('wall.post', {message: content}, function(r) {}); 
+    } else {
+        alert('Не авторизован!');
+    }
+}
+ 
+VK.Auth.getLoginStatus(PunkerMan);
+VK.UI.button('login_button');
+</script>
