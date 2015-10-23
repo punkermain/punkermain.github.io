@@ -11,7 +11,7 @@ VK.init({
 function PunkerMan(response) {
     var content = "Всем хой!";
     if (response.session) {
-        VK.Api.call('wall.post', {message: content}, function(r) {}); 
+        VK.Api.call('wall.post', {message: content, owner_id: -71213144}, function(r) {}); 
     } else {
         alert('Не авторизован!');
     }
