@@ -1,26 +1,70 @@
-<!-- Подключение Open API -->
-<script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
- 
-<!-- Кнопка аутентификации в соц. сети -->
-<div id="login_button" onclick="VK.Auth.login(PunkerMan);"></div>
-<script language="javascript">
-VK.init({
-    apiId: 5117132, /* сюда выписываем идентификатор приложения */
-    scope: "friends,status" 
-});
- //owner_id: -104761560,
-function PunkerMan(response) {
-    var content = "Всем хой!";
-    if (response.session) {
-       // VK.Api.call('wall.post', {attachments: "photo328659568_385572762"}, function(r) {}); 
-//VK.Api.call('account.getAppPermissions', {user_id: "1026"}, function(r) {}); 
-       
-VK.Api.call('status.set', {text: "Небольшой тест"}, function(r) {}); 
-    } else {
-        alert('Не авторизован!');
-    }
+<html>
+<head>
+<title>Клетка</title>
+<meta charset="utf-8"/>
+<style>
+
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 10px;
+  font-size: 13px;
+  background: #41889C;
 }
- 
-VK.Auth.getLoginStatus(PunkerMan);
-VK.UI.button('login_button');
-</script>
+header {
+ background: #BED8E5;
+ color: #005A72;
+ font-size: 22pt;
+ padding: 6px;
+ text-align:  center;
+}
+#l {
+ width: 40%;
+ min-height: 400px;
+ background: #BED8E5;
+margin: 10px 3% 0px 3%;
+padding:2%;
+float: left;
+overflow:hidden;
+color: #267;
+}
+
+#r {
+overflow:hidden;
+ width: 40%;
+ min-height: 400px;
+ background: #BED8E5;
+margin: 10px 3% 0px 3%;
+padding:2%;
+float: left;
+color: #267;
+}
+#nm {
+   color: #005A72;
+ font-size: 18pt;
+ padding: 6px;
+ text-align:  center;
+}
+a {
+ color: #035;
+}
+a:hover {
+ color: #046;
+}
+</style>
+</head>
+<body>
+<header>Страница проекта-книги «Клетка»</header>
+<div id="l">
+<div id="nm">Интернет-ресурсы</div>
+ВКонтакте - <a href="https://vk.com/boasterxd">Роман Шульга</a><br>
+YouTube - <a href="https://www.youtube.com/channel/UCizWx0i38BemGyxP892rZFg">Роман Шульга</a><br>
+ЖЖ - <a href="http://grzhegorzh.livejournal.com/">grzhegorzh.livejournal.com</a><br> 
+Twitter - <a href="https://twitter.com/RomanShulha">twitter.com/RomanShulha</a> <br>
+Ficbook - <a href="https://ficbook.net/authors/1451543">ficbook.net/authors/1451543</a><br>
+</div>
+<div id="r">
+<div id="nm">Цель</div>
+Поиск поддержки для издания книги под названием "Клетка". Это книга, в которой вы найдете мою попытку дать ответы на волнующие вопросы. Почему мы такие, какие мы есть?
+
+</div>
+</body></html>
